@@ -1,0 +1,15 @@
+$def with (form)
+<html>
+<head>
+<title> Temperature Graph - Settings</title>
+<meta name = "viewport" content = "width = device-width">
+</head>
+<body>
+	$if not form.valid: <p class="error">Not valid.</p>
+	$if form:
+		<form action="" method="post">
+		$:form.render()  
+		</form>
+</body>
+</html>
+
