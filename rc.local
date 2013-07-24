@@ -11,24 +11,8 @@
 #
 # By default this script does nothing.
 
-# Print the IP address
-_IP=$(hostname -I) || true
-if [ "$_IP" ]; then
-  printf "My IP address is %s\n" "$_IP"
-fi
-#rm -f /var/www/cgi-bin/ipaddress
-#sleep 5
-#/var/www/cgi-bin/airbears.sh
 mv --backup=t /var/www/cgi-bin/temp.csv /var/www/cgi-bin/temp.csv.bak
-#rm /var/www/cgi-bin/control.csv
-cp -f /var/www/cgi-bin/control.csv.default /var/www/cgi-bin/control.csv
-sleep 2
-cd /var/www/cgi-bin
-/var/www/cgi-bin/temp_control.py &
-sleep 1
-/var/www/cgi-bin/temp_graph.py >/dev/null &
-sleep 1
 /var/www/cgi-bin/control_input.py 80 >/dev/null &
-#/usr/local/bin/twitter -erp.smartbbq@gmail.com set YO!
+
 exit 0
 
