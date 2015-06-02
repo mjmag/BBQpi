@@ -11,7 +11,9 @@
 #
 # By default this script does nothing.
 
-mv --backup=t /var/www/cgi-bin/temp.csv /var/www/cgi-bin/temp.csv.bak
+if mv --backup=t /var/www/cgi-bin/temp.csv /var/www/cgi-bin/temp.csv.bak
+then echo temp file moved
+fi
 /var/www/cgi-bin/control_input.py 80 >/dev/null &
 
 exit 0
