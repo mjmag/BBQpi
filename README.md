@@ -13,8 +13,9 @@ and a pair of MAX6675 K-type thermocouple amplifiers in order to make temperatur
 
 ### Software
 * Python 2.7 and web.py
+* Matplotlib
 * Software with Twitter API support (If twitter alerts desired)
-* Possibly other dependencies to be documented
+* Developed using rasbian OS.
 
 ## Software Components
 * List to include components, file name, and funcitons.
